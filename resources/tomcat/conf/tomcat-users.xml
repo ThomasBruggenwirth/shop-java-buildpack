@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<tomcat-users>
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+-->
+        <role rolename="NotOCPAgent"/>
+    <role rolename="OCPAgent"/>
+    <role rolename="OCPAgentProcessing"/>
+    <role rolename="OCPAgentException"/>
+    <role rolename="OCPAgentManager"/>
+    <role rolename="OCPAgentROI"/>
+    <role rolename="OCPAgentUK"/>
+    <role rolename="OCPAdmin"/>
+    <role rolename="OCPProspectOrders"/>
+    <role rolename="OCPExistingOrders"/>
+    <role rolename="OCPAgentHomemove"/>
+
+    <user username="notAnAgent" password="password" roles="NotOCPAgent"/>
+    <user username="Manager" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentManager,OCPProspectOrders,OCPExistingOrders"/>
+    <user username="Processing" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentProcessing,OCPProspectOrders,OCPExistingOrders"/>
+    <user username="ProcessingException" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentProcessing,OCPAgentException,OCPProspectOrders,OCPExistingOrders"/>
+    <user username="Exception" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentException,OCPProspectOrders,OCPExistingOrders"/>
+    <user username="ExceptionProspect" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentException,OCPProspectOrders"/>
+    <user username="ExceptionExisting" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentException,OCPExistingOrders"/>
+    <user username="admin" password="password" roles="OCPAdmin"/>
+    <user username="RoiManager" password="password" roles="OCPAgent,OCPAgentROI,OCPAgentManager,OCPProspectOrders,OCPExistingOrders"/>
+    <user username="RoiException" password="password" roles="OCPAgent,OCPAgentROI,OCPAgentException,OCPProspectOrders"/>
+    <user username="RoiProcessing" password="password" roles="OCPAgent,OCPAgentROI,OCPAgentProcessing,OCPProspectOrders,OCPExistingOrders"/>
+    <user username="RoiProcessingException" password="password" roles="OCPAgent,OCPAgentROI,OCPAgentProcessing,OCPAgentException,OCPProspectOrders,OCPExistingOrders"/>
+    <user username="RoiProcessingExceptionManager" password="password" roles="OCPAgent,OCPAgentROI,OCPAgentManager,OCPAgentProcessing,OCPAgentException,OCPProspectOrders"/>
+    <user username="HomeMoveAgent" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentProcessing,OCPAgentException,OCPAgentHomemove"/>
+    <user username="HomeMoveAgentManager" password="password" roles="OCPAgent,OCPAgentUK,OCPAgentManager,OCPAgentHomemove"/>
+    <user username="invalidUkRoiAgent" password="password" roles="OCPAgent,OCPAgentROI,OCPAgentUK"/>
+
+</tomcat-users>
