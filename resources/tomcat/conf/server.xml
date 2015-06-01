@@ -31,6 +31,7 @@
                 <Context docBase="/app/assets/uk" path="/uk/assets"/>
                 <Context docBase="/app/assets/shared/js/jquery" path="/uk/assets/js/jquery"/>
                 <Context docBase="/app/assets/uk/images/liveperson" path="/uk/assets/images/liveperson"/>
+                <Context docBase="/app/WEB-INF/lib/ocp-cms-content.jar" path="/cmsimages"/>
             </Host>
         </Engine>
     </Service>
