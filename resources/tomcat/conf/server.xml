@@ -28,9 +28,9 @@
                    enabled="${access.logging.enabled}"/>
             <Host name='localhost'>
                 <Listener className="com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener"/>
-                <Context docBase="/app/ocp/assets/uk" path="/uk/assets/-1"/>
-                <Context docBase="/app/ocp/assets/shared/js/jquery" path="/uk/assets/-1/js/jquery"/>
-                <Context docBase="/app/ocp/assets/uk/images/liveperson" path="/uk/assets/images/liveperson"/>
+                <Context docBase="/app/assets/uk" path="/uk/assets/-1"/>
+                <Context docBase="/app/assets/shared/js/jquery" path="/uk/assets/-1/js/jquery"/>
+                <Context docBase="/app/assets/uk/images/liveperson" path="/uk/assets/images/liveperson"/>
             </Host>
         </Engine>
     </Service>
