@@ -37,9 +37,9 @@
             <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
             <Host name='localhost'>
                 <Listener className="com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener"/>
-                <Context docBase="/app/assets/uk" path="/uk/assets"/>
-                <Context docBase="/app/assets/shared/js/jquery" path="/uk/assets/js/jquery"/>
-                <Context docBase="/app/assets/uk/images/liveperson" path="/uk/assets/images/liveperson"/>
+                <Context docBase="/home/vcap/app/assets/uk" path="/uk/assets"/>
+                <Context docBase="/home/vcap/app/assets/shared/js/jquery" path="/uk/assets/js/jquery"/>
+                <Context docBase="/home/vcap/app/assets/uk/images/liveperson" path="/uk/assets/images/liveperson"/>
             </Host>
         </Engine>
     </Service>
