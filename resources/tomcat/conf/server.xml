@@ -18,12 +18,10 @@
 
 <Server port='-1'>
 
+    <Listener className="org.apache.catalina.mbeans.ServerLifecycleListener"/>
+    <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
     <GlobalNamingResources>
-      <Resource name="UserDatabase" auth="Container"
-                type="org.apache.catalina.UserDatabase"
-                description="User database that can be updated and saved"
-                factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
-                pathname="conf/tomcat-users.xml" />
+      <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
     </GlobalNamingResources>
 
     <Service name='Catalina'>
@@ -37,6 +35,7 @@
             <Host name='localhost'>
                 <Listener className="com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener"/>
             </Host>
+            <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
         </Engine>
     </Service>
 
