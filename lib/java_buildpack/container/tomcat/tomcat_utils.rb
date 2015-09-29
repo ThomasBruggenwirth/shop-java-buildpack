@@ -53,6 +53,13 @@ module JavaBuildpack
       @droplet.sandbox + 'conf/server.xml'
     end
 
+    # The Tomcat +tomcat-users.xml+ file
+    #
+    # @return [Pathname] The Tomcat +tomcat-users.xml+ file
+    def tomcat_users_xml
+      @droplet.sandbox + 'conf/tomcat-users.xml'
+    end
+
     # The Tomcat +lib+ directory
     #
     # @return [Pathname] the Tomcat +lib+ directory
