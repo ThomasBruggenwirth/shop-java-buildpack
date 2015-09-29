@@ -18,7 +18,6 @@
 
 <Server port='-1'>
 
-    <Listener className="org.apache.catalina.mbeans.ServerLifecycleListener"/>
     <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
     <GlobalNamingResources>
       <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
