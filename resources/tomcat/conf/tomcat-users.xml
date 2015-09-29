@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tomcat-users>
     <role rolename="checkoutadmin"/>
-    <user password="password" roles="checkoutadmin" username="admin"/>
+    <role rolename="manager-gui"/>
+    <user password="password" roles="checkoutadmin,manager-gui" username="admin"/>
 </tomcat-users>
